@@ -22,8 +22,16 @@
         <div class="tools">
             Tool Box
             <div class="tool-row">
-                <div class="tool">
-                    MAP
+                <div class="tool" id="mapFile">
+                    <label>
+                        <input class="file" type="file" id="selectMapFile" accept=".png,.jpeg">Select Map File
+                    </label>
+                    <!-- <form class="form" action="#">
+                        <div class="form__file">
+                            <input class="file" type="file" id="selectMapFile" accept=".png,.jpeg">
+                            <label for="selectMapFile">Select MAP</label>
+                        </div>
+                    </form> -->
                 </div>
                 <div class="tool">
                     <img src="home.png">
@@ -76,7 +84,11 @@
         </div>
 
         <div class="map">
-            <p>MAP</p>
+            <!-- <p>MAP</p> -->
+            <div class="canvas-space">
+                <canvas id="canvasMap"></canvas>
+                <canvas id="canvasPaint"></canvas>
+            </div>
         </div>
         <div class="photos">
             <div class="photo-row">

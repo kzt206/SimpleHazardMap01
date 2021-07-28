@@ -30,10 +30,51 @@
     width:50%;
 }
 
+/* https://into-the-program.com/customize-input-type-file/ */
+label{
+    padding: 0px 0px;
+    color: white;
+    /* background-color: #384878; */
+    cursor: pointer;
+}
+
+input[type='file']{
+    display:none;
+}
+
+#mapFile{
+    background-color:blue;
+}
+
+
 .map{
     border: dashed 3px blue;
     width:80%;
 }
+
+.canvas-space{
+    position: relative;
+    /* border:dashed 3px red; */
+    /* width:500px; */
+}
+
+
+#canvasMap{
+    position:absolute;
+    /* top:100px; */
+    /* left:200px; */
+    /* margin-left: 200; */
+    border: solid 3px blue;
+}
+
+#canvasPaint{
+    position:absolute;
+    /* padding:100; */
+    /* margin-left: 500; */
+    border: solid 2px green;
+}
+
+
 
 .photos{
     border: dashed 2px green;
