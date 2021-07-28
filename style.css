@@ -46,10 +46,9 @@ input[type='file']{
     background-color:blue;
 }
 
-
 .map{
     border: dashed 3px blue;
-    width:80%;
+    width:800px;
 }
 
 .canvas-space{
