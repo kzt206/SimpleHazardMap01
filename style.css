@@ -30,6 +30,14 @@
     width:50%;
 }
 
+.iconButton{
+    display:inline-block;
+    background:white;
+    /* color:black; */
+    padding:0px 0px;
+    cursor: pointer;
+}
+
 /* https://into-the-program.com/customize-input-type-file/ */
 label{
     padding: 0px 0px;
