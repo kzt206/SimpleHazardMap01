@@ -1,30 +1,168 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- cdnjs -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
-    <title>Oekaki06</title>
+    <title>SimpleHazardMap</title>
 </head>
+
 <body>
+    <div class="title">
+        <p>My Hazard Map</p>
+    </div>
+    <div class="workspace">
+        <div class="tools">
+            Tool Box
+            <div class="tool-row">
+                <div class="tool">
+                    MAP
+                </div>
+                <div class="tool">
+                    <img src="home.png">
+                </div>
+            </div>
+            <div class="tool-row">
+                <div class="tool">
+                    <img src="school.png">
+                </div>
+                <div class="tool">
+                    <img src="evacuation.png">
+                </div>
+            </div>
+            <div class="tool-row">
+                <div class="tool">
+                    <img src="camera1.png">
+                </div>
+                <div class="tool">
+                    <img src="camera2.png">
+                </div>
+            </div>
+            <div class="tool-row">
+                <div class="tool">
+                    <img src="camera3.png">
+                </div>
+                <div class="tool">
+                    <img src="camera4.png">
+                </div>
+            </div>
+            <div class="tool-row">
+                <div class="tool">
+                    <img src="camera5.png">
+                </div>
+                <div class="tool">
+                    fusen
+                </div>
+            </div>
+            <div class="tool-path">
+                school path
+            </div>
+            <div class="tool-path">
+                escape path
+            </div>
+            <div class="tool-path">
+                pen size
+            </div>
+            <div class="tool-path">
+                Re Do
+            </div>
+        </div>
+
+        <div class="map">
+            <p>MAP</p>
+        </div>
+        <div class="photos">
+            <div class="photo-row">
+                <div class="photo-icon">
+                    <img src="camera1.png">
+                </div>
+                <div class="photo">
+                    photo1
+                </div>
+            </div>
+            <div class="photo-row">
+                <div class="photo-icon">
+                    <img src="camera2.png">
+                </div>
+                <div class="photo">
+                    photo2
+                </div>
+            </div>
+            <div class="photo-row">
+                <div class="photo-icon">
+                    <img src="camera3.png">
+                </div>
+                <div class="photo">
+                    photo3
+                </div>
+            </div>
+            <div class="photo-row">
+                <div class="photo-icon">
+                    <img src="camera4.png">
+                </div>
+                <div class="photo">
+                    photo4
+                </div>
+            </div>
+            <div class="photo-row">
+                <div class="photo-icon">
+                    <img src="camera5.png">
+                </div>
+                <div class="photo">
+                    photo5
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="memo-space">
+        <div class="memos">
+            <div class="memo-title">
+                reasons
+            </div>
+            <div class="memo">
+
+            </div>
+        </div>
+        <div class="memos">
+            <div class="memo-title">
+                circumstance
+            </div>
+            <div class="memo">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- kokomade -->
     <p>
-        <strong  id="page-title">手作りハザードマップアプリ　シンプル版（試作中）</strong>
+        <strong id="page-title">手作りハザードマップアプリ　シンプル版Ver.2（試作中）</strong>
     </p>
     <p>Paint by holding down the mouse button and moving it.<br>
-        <a href="" download="my_painting.png" >Download my painting</a>
+        <a href="" download="my_painting.png">Download my painting</a>
         <a href="" download="canvas01.png" id="save01">Download01</a>
         <a href="" download="canvas02.png" id="save02">Download02</a>
         <a href="" download="canvas03.png" id="contact">Contact canvas</a>
         <i class="fa fa-refresh refresh-btn"><strong>Clear</strong></i>
     </p>
-    <div id="pen-tools" class="pen-tools">
-            <div>
-                <div></div>
-            </div>
+
+
+    <div class="paint-space">
+        <div id="pen-tools" class="pen-tools">
+            <!-- <div>
+                    
+                </div> -->
             <div id="drawing-colors" class="drawing-colors">
                 <div class="color-circle active" data-color="hotpink" onclick="selectColor(this)"></div>
                 <div class="color-circle" data-color="red" onclick="selectColor(this)"></div>
@@ -32,17 +170,19 @@
                 <div class="color-circle" data-color="green" onclick="selectColor(this)"></div>
             </div>
             <!-- <div id="favContainer"> <label for="favcolor">Select your favourite color:</label>
-                <input type="color" name="favcolor" id="favcolor" value="#ff0000" onchange="favColor(this)">
-            </div> -->
+                    <input type="color" name="favcolor" id="favcolor" value="#ff0000" onchange="favColor(this)">
+                </div> -->
             <div id="pen-size" class="pen-size">
                 <div><label for="pen-size"><i class="fa fa-pencil"></i>Pen size</label></div>
-                <div><input type="range" name="pen-size" id="pen-size" value="4" step="1" min="1" max="8" onchange="penSizeChange(this.value)"></div>
+                <div><input type="range" name="pen-size" id="pen-size" value="4" step="1" min="1" max="8"
+                        onchange="penSizeChange(this.value)"></div>
             </div>
-    </div>
+        </div>
 
-    <div class="canvas-wrap">
-        <canvas id="canvas01"></canvas>
-        <canvas id="canvas02"></canvas>
+        <div class="canvas-wrap">
+            <canvas id="canvas01"></canvas>
+            <canvas id="canvas02"></canvas>
+        </div>
     </div>
 
     <div class="buttons">
@@ -52,9 +192,10 @@
     </div>
 
     <canvas id="canvas03"></canvas>
-    
-    
+
+
 
     <script src="canvas.js"></script>
 </body>
+
 </html>

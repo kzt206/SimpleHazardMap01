@@ -1,3 +1,88 @@
+.title{
+    text-align:center;
+    border:solid 2px red;
+    height:50px;
+}
+
+.workspace{
+    display: flex;
+    border:solid 5px orange;
+    height:600px;
+}
+
+.tools{
+    border:dashed 2px red;
+    width:10%;
+}
+
+.tool-row{
+    display: flex;
+    height:10%;
+}
+
+.tool-path{
+    height:10%;
+}
+
+.tool{
+    text-align: center;
+    border:solid 1px green;
+    width:50%;
+}
+
+.map{
+    border: dashed 3px blue;
+    width:80%;
+}
+
+.photos{
+    border: dashed 2px green;
+    width:20%;
+}
+
+.photo-row{
+    border: dashed 1px black;
+    display: flex;
+    height:20%;
+}
+
+.photo-icon{
+    width:30%;
+}
+
+.photo{
+    width:70%;
+}
+
+.memo-space{
+    display: flex;
+    border: solid 3px pink;
+    height:200px;
+}
+
+.memos{
+    border: dashed 2px red;
+    width:50%;
+}
+
+.memo-title{
+    text-align: center;
+    border: dashed 2px blue;
+    height:20%;
+}
+
+.memo{
+    height: 80%;
+}
+
+
+/* kokomade */
+
+.panint-space{
+    display: flex;
+    border:solid 2px red;
+}
+
 #page-title{
     font-size: 20px;
     background-color:#69c;
@@ -7,11 +92,13 @@
 
 .canvas-wrap{
     position: relative;
+    border:dashed 3px red;
+    width:500px;
 }
 
 
 #canvas01{
-    position:absolute;
+    /* position:absolute; */
     /* top:100px; */
     /* left:200px; */
     /* margin-left: 200; */
@@ -19,7 +106,7 @@
 }
 
 #canvas02{
-    position:absolute;
+    /* position:absolute; */
     /* padding:100; */
     /* margin-left: 500; */
     border: solid 2px green;
@@ -50,8 +137,9 @@ a{
 
 .pen-tools{
     /* display:flex; */
-    width:60%;
+    width:300px;
     /* margin: auto; */
+    border: solid 2px green;
 }
 
 .fa-refresh{
@@ -86,7 +174,7 @@ a{
     width:20px;
     border: 1px solid black;
     border-radius:50%;
-    margin-left: 7px;
+    margin-bottom: 7px;
     cursor: pointer;
 }
 
