@@ -103,15 +103,14 @@ camera5Button.addEventListener("click",()=>{
     console.log("camera5 stamp selected");
 })
 
-
-//消しゴムの設定
+//消しゴムボタンの設定
 const eraserButton = document.getElementById("eraserButton");
 eraserButton.addEventListener("click",() => {
     console.log("Eraser is clicked");
     penStatus = "eraser";
 })
 
-//canvasをクリックしたときのイベント
+//canvasをクリックしたときのイベント設定
 this.canvasPaint.addEventListener("click",(e) => {
     let x = e.offsetX-25;
     let y = e.offsetY-25;

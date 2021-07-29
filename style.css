@@ -10,6 +10,8 @@
     height:600px;
 }
 
+
+/* Tool Box画面の設定 */
 .tools{
     border:dashed 2px red;
     width:10%;
@@ -54,6 +56,11 @@ input[type='file']{
     background-color:blue;
 }
 
+.textButton{
+    cursor:pointer;
+}
+
+/* マップ画面の設定 */
 .map{
     border: dashed 3px blue;
     width:800px;
@@ -82,7 +89,7 @@ input[type='file']{
 }
 
 
-
+/* 写真画面の設定 */
 .photos{
     border: dashed 2px green;
     width:20%;
@@ -102,6 +109,7 @@ input[type='file']{
     width:70%;
 }
 
+/* メモ画面の設定 */
 .memo-space{
     display: flex;
     border: solid 3px pink;
