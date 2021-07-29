@@ -66,18 +66,37 @@ evacuationButton.addEventListener("click",()=>{
     penStatus = "evacuation";
     console.log("Evacuation Stamp selected");
 })
+//消しゴムの設定
+const eraserButton = document.getElementById("eraserButton");
+eraserButton.addEventListener("click",() => {
+    console.log("Eraser is clicked");
+    penStatus = "eraser";
+})
 
+//canvasをクリックしたときのイベント
 this.canvasPaint.addEventListener("click",(e) => {
     let x = e.offsetX-25;
     let y = e.offsetY-25;
 
     console.log("x:",x,"y:",y);
+    //penStatusの状態に応じて挙動変更
     console.log("Penstatus;",penStatus);
       if(penStatus == "home") {
-        ctxPaint.drawImage(charaHome,x,y,20,20);
+        ctxPaint.drawImage(charaHome,x,y);
       } else if(penStatus == "school"){
         ctxPaint.drawImage(charaSchool,x,y);
       } else if(penStatus == "evacuation"){
         ctxPaint.drawImage(charaEvacuation,x,y);
+      } else if(penStatus == "eraser"){
+        ctxPaint.clearRect(e.offsetX-10,e.offsetY-10,20,20);
       }
 })
+
+//clearbuttonの設定
+const clearButon = document.getElementById("clearButton");
+clearButton.addEventListener("click",()=>{
+  console.log("Clear is clicked");
+  ctxPaint.clearRect(0,0,canvasPaint.width,canvasPaint.height);
+})
+
+
