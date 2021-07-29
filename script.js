@@ -147,3 +147,41 @@ clearButton.addEventListener("click",()=>{
 })
 
 
+////////////////////////////////////////////////////////////////
+// 写真画面の設定
+////////////////////////////////////////////////////////////////
+const photoContainer1 = document.getElementById("photoConatiner1");
+const photoCanvas1 = document.getElementById("canvasCamera1");
+const ctxPhoto1 = photoCanvas1.getContext("2d");
+//canvasサイズの指定 (親要素の大きさに合わせる)
+photoCanvas1.width = photoContainer1.clientWidth;
+photoCanvas1.height = photoContainer1.clientHeight;
+
+const photoContainer2 = document.getElementById("photoConatiner2");
+const photoCanvas2 = document.getElementById("canvasCamera2");
+const ctxPhoto2 = photoCanvas2.getContext("2d");
+//canvasサイズの指定 (親要素の大きさに合わせる)
+photoCanvas2.width = photoContainer2.clientWidth;
+photoCanvas2.height = photoContainer2.clientHeight;
+
+const photoContainer3 = document.getElementById("photoConatiner3");
+const photoCanvas3 = document.getElementById("canvasCamera3");
+const ctxPhoto3 = photoCanvas3.getContext("2d");
+//canvasサイズの指定 (親要素の大きさに合わせる)
+photoCanvas3.width = photoContainer3.clientWidth;
+photoCanvas3.height = photoContainer3.clientHeight;
+
+const photoContainer4 = document.getElementById("photoConatiner4");
+const photoCanvas4 = document.getElementById("canvasCamera4");
+const ctxPhoto4 = photoCanvas4.getContext("2d");
+//canvasサイズの指定 (親要素の大きさに合わせる)
+photoCanvas4.width = photoContainer4.clientWidth;
+photoCanvas4.height = photoContainer4.clientHeight;
+
+
+const photoContainer5 = document.getElementById("photoConatiner5");
+const photoCanvas5 = document.getElementById("canvasCamera5");
+const ctxPhoto5 = photoCanvas5.getContext("2d");
+//canvasサイズの指定 (親要素の大きさに合わせる)
+photoCanvas5.width = photoContainer5.clientWidth;
+photoCanvas5.height = photoContainer5.clientHeight;

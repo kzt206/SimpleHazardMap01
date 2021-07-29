@@ -102,11 +102,15 @@ input[type='file']{
 }
 
 .photo-icon{
-    width:30%;
+    width:20%;
 }
 
 .photo{
-    width:70%;
+    width:80%;
+}
+
+.canvasCamera{
+    border:dashed 2px yellow;
 }
 
 /* メモ画面の設定 */
