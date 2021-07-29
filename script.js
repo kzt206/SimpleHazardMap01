@@ -150,6 +150,7 @@ clearButton.addEventListener("click",()=>{
 ////////////////////////////////////////////////////////////////
 // 写真画面の設定
 ////////////////////////////////////////////////////////////////
+//PhotoCanvas1
 const photoContainer1 = document.getElementById("photoConatiner1");
 const photoCanvas1 = document.getElementById("canvasCamera1");
 const ctxPhoto1 = photoCanvas1.getContext("2d");
@@ -157,6 +158,7 @@ const ctxPhoto1 = photoCanvas1.getContext("2d");
 photoCanvas1.width = photoContainer1.clientWidth;
 photoCanvas1.height = photoContainer1.clientHeight;
 
+//PhotoCanvas2
 const photoContainer2 = document.getElementById("photoConatiner2");
 const photoCanvas2 = document.getElementById("canvasCamera2");
 const ctxPhoto2 = photoCanvas2.getContext("2d");
@@ -164,6 +166,7 @@ const ctxPhoto2 = photoCanvas2.getContext("2d");
 photoCanvas2.width = photoContainer2.clientWidth;
 photoCanvas2.height = photoContainer2.clientHeight;
 
+//PhotoCanvas3
 const photoContainer3 = document.getElementById("photoConatiner3");
 const photoCanvas3 = document.getElementById("canvasCamera3");
 const ctxPhoto3 = photoCanvas3.getContext("2d");
@@ -171,6 +174,7 @@ const ctxPhoto3 = photoCanvas3.getContext("2d");
 photoCanvas3.width = photoContainer3.clientWidth;
 photoCanvas3.height = photoContainer3.clientHeight;
 
+//PhotoCanvas4
 const photoContainer4 = document.getElementById("photoConatiner4");
 const photoCanvas4 = document.getElementById("canvasCamera4");
 const ctxPhoto4 = photoCanvas4.getContext("2d");
@@ -178,10 +182,128 @@ const ctxPhoto4 = photoCanvas4.getContext("2d");
 photoCanvas4.width = photoContainer4.clientWidth;
 photoCanvas4.height = photoContainer4.clientHeight;
 
-
+//PhotoCanvas5
 const photoContainer5 = document.getElementById("photoConatiner5");
 const photoCanvas5 = document.getElementById("canvasCamera5");
 const ctxPhoto5 = photoCanvas5.getContext("2d");
 //canvasサイズの指定 (親要素の大きさに合わせる)
 photoCanvas5.width = photoContainer5.clientWidth;
 photoCanvas5.height = photoContainer5.clientHeight;
+
+//画像1の読み込み
+const selectPhoto1 = document.getElementById("selectPhoto1");
+selectPhoto1.addEventListener("change",function(evt){
+
+    // console.log("file selector");
+
+    let file = evt.target.files;
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file[0]);
+
+    console.log(file[0]);
+
+    reader.onload = function(){
+        let dataURL = reader.result;
+        let img = new Image();
+
+        img.src = dataURL;
+
+        img.onload = function(){
+            ctxPhoto1.drawImage(img,0,0,photoCanvas1.width,photoCanvas1.height);
+        }
+    }
+
+},false);
+
+//画像2の読み込み
+const selectPhoto2 = document.getElementById("selectPhoto2");
+selectPhoto2.addEventListener("change",function(evt){
+    // console.log("file selector");
+    let file = evt.target.files;
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file[0]);
+
+    console.log(file[0]);
+
+    reader.onload = function(){
+        let dataURL = reader.result;
+        let img = new Image();
+
+        img.src = dataURL;
+
+        img.onload = function(){
+            ctxPhoto2.drawImage(img,0,0,photoCanvas2.width,photoCanvas2.height);
+        }
+    }
+},false);
+
+//画像3の読み込み
+const selectPhoto3 = document.getElementById("selectPhoto3");
+selectPhoto3.addEventListener("change",function(evt){
+    // console.log("file selector");
+    let file = evt.target.files;
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file[0]);
+
+    console.log(file[0]);
+
+    reader.onload = function(){
+        let dataURL = reader.result;
+        let img = new Image();
+
+        img.src = dataURL;
+
+        img.onload = function(){
+            ctxPhoto3.drawImage(img,0,0,photoCanvas3.width,photoCanvas3.height);
+        }
+    }
+},false);
+
+//画像4の読み込み
+const selectPhoto4 = document.getElementById("selectPhoto4");
+selectPhoto4.addEventListener("change",function(evt){
+    // console.log("file selector");
+    let file = evt.target.files;
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file[0]);
+
+    console.log(file[0]);
+
+    reader.onload = function(){
+        let dataURL = reader.result;
+        let img = new Image();
+
+        img.src = dataURL;
+
+        img.onload = function(){
+            ctxPhoto4.drawImage(img,0,0,photoCanvas4.width,photoCanvas4.height);
+        }
+    }
+},false);
+
+//画像5の読み込み
+const selectPhoto5 = document.getElementById("selectPhoto5");
+selectPhoto5.addEventListener("change",function(evt){
+    // console.log("file selector");
+    let file = evt.target.files;
+    let reader = new FileReader();
+
+    reader.readAsDataURL(file[0]);
+
+    console.log(file[0]);
+
+    reader.onload = function(){
+        let dataURL = reader.result;
+        let img = new Image();
+
+        img.src = dataURL;
+
+        img.onload = function(){
+            ctxPhoto5.drawImage(img,0,0,photoCanvas5.width,photoCanvas5.height);
+        }
+    }
+},false);

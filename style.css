@@ -43,7 +43,7 @@
 /* https://into-the-program.com/customize-input-type-file/ */
 label{
     padding: 0px 0px;
-    color: white;
+    color: black;
     /* background-color: #384878; */
     cursor: pointer;
 }
@@ -102,6 +102,7 @@ input[type='file']{
 }
 
 .photo-icon{
+    color:black;
     width:20%;
 }
 
@@ -110,7 +111,11 @@ input[type='file']{
 }
 
 .canvasCamera{
-    border:dashed 2px yellow;
+    border:dashed 2px orange;
+}
+
+#selectPhoto1{
+    color:black;
 }
 
 /* メモ画面の設定 */
@@ -134,6 +139,9 @@ input[type='file']{
 .memo{
     height: 80%;
 }
+
+
+
 
 
 /* kokomade */
