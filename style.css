@@ -40,6 +40,10 @@
     cursor: pointer;
 }
 
+.penButton{
+    cursor: pointer;
+}
+
 /* https://into-the-program.com/customize-input-type-file/ */
 label{
     padding: 0px 0px;

@@ -61,7 +61,7 @@ charaCamera5.src = "camera5.png"
 
 
 //スタンプを選択
-let penStatus = "pen";
+let penStatus = "pencil";
 const homeButton = document.getElementById("homeButton");
 homeButton.addEventListener("click",()=>{
     penStatus = "home";
@@ -102,7 +102,18 @@ camera5Button.addEventListener("click",()=>{
     penStatus = "camera5";
     console.log("camera5 stamp selected");
 })
-
+const pen1Button = document.getElementById("pen1Button");
+pen1Button.addEventListener("click",()=>{
+    penStatus = "pencil";
+    ctxPaint.fillStyle = "blue";  //線の色を変更
+    console.log("pen1 selected");
+})
+const pen2Button = document.getElementById("pen2Button");
+pen2Button.addEventListener("click",()=>{
+    penStatus = "pencil";
+    ctxPaint.fillStyle = "green"; //線の色を変更
+    console.log("pen2 selected");
+})
 //消しゴムボタンの設定
 const eraserButton = document.getElementById("eraserButton");
 eraserButton.addEventListener("click",() => {
@@ -111,7 +122,7 @@ eraserButton.addEventListener("click",() => {
 })
 
 //canvasをクリックしたときのイベント設定
-this.canvasPaint.addEventListener("click",(e) => {
+this.canvasPaint.addEventListener("mousedown",(e) => {
     let x = e.offsetX-25;
     let y = e.offsetY-25;
 
@@ -314,11 +325,11 @@ selectPhoto5.addEventListener("change",function(evt){
 let isDrag = false;
 //線の色の初期設定
 let penSize = 4;
-ctxPaint.fillStyle = "hotpink";
+ctxPaint.fillStyle = "blue";
 ctxPaint.strokeStyle = ctxPaint.fillStyle;
 //線を描く関数
 function draw(x2,y2){
-    if(isDrag){
+    if(isDrag && penStatus == "pencil"){
         ctxPaint.beginPath();
         ctxPaint.arc(x2,y2,penSize,0,Math.PI * 2);
         ctxPaint.closePath();
@@ -341,7 +352,6 @@ canvasPaint.addEventListener("mousedown",(e)=>{
     isDrag = true;
     x = e.offsetX;
     y = e.offsetY;
-
     // console.log(x,y)
 });
 canvasPaint.addEventListener("mouseup",()=>{
