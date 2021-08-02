@@ -307,3 +307,48 @@ selectPhoto5.addEventListener("change",function(evt){
         }
     }
 },false);
+
+
+//線を描く
+// マウスがドラッグされているか(クリックされたままか)判断するためのフラグ
+let isDrag = false;
+//線の色の初期設定
+let penSize = 4;
+ctxPaint.fillStyle = "hotpink";
+ctxPaint.strokeStyle = ctxPaint.fillStyle;
+//線を描く関数
+function draw(x2,y2){
+    if(isDrag){
+        ctxPaint.beginPath();
+        ctxPaint.arc(x2,y2,penSize,0,Math.PI * 2);
+        ctxPaint.closePath();
+        ctxPaint.fill();
+        //draw line
+        drawLine(x,y,x2,y2);
+    }
+    x = x2;
+    y = y2;
+}
+function drawLine(x1,y1,x2,y2){
+    ctxPaint.beginPath();
+    ctxPaint.moveTo(x1,y1);
+    ctxPaint.lineTo(x2,y2);
+    ctxPaint.strokeStyle = ctxPaint.fillStyle;
+    ctxPaint.lineWidth = penSize * 2;
+    ctxPaint.stroke();
+}
+canvasPaint.addEventListener("mousedown",(e)=>{
+    isDrag = true;
+    x = e.offsetX;
+    y = e.offsetY;
+
+    // console.log(x,y)
+});
+canvasPaint.addEventListener("mouseup",()=>{
+    isDrag = false;
+    x = undefined;
+    y = undefined;
+});
+canvasPaint.addEventListener("mousemove",(event)=>{
+    draw(event.offsetX,event.offsetY);
+});
