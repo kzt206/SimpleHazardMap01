@@ -12,6 +12,13 @@ canvasMap.height = 600;
 canvasPaint.width = 800;
 canvasPaint.height = 600;
 
+//結合用キャンバスの設定
+const canvasContact = document.querySelector("#canvasContact");
+const ctxContact = canvasContact.getContext("2d");
+
+canvasContact.width = 800;
+canvasContact.height = 600;
+
 //マップ画像の読み込み
 const selectMapFile = document.getElementById("selectMapFile");
 selectMapFile.addEventListener("change",function(evt){
@@ -370,7 +377,21 @@ canvasPaint.addEventListener("mousemove",(event)=>{
 const downloadButton = document.getElementById("downloadButton");
 downloadButton.addEventListener("click",(e) => {
     let link = document.createElement("a");
-    link.href = canvasPaint.toDataURL("image/png");
+    link.href = canvasContact.toDataURL("image/png");
     link.download = "test.png";
     link.click();
 })
+
+//結合ボタンの実装
+const contactButton = document.getElementById("buttonContact");
+contactButton.addEventListener("click",(e) => {
+    ctxContact.drawImage(createImage(ctxMap),0,0);
+    ctxContact.drawImage(createImage(ctxPaint),0,0);
+    console.log("Contact button pressed!")
+})
+
+let createImage= function(context){
+    var image= new Image
+    image.src= context.canvas.toDataURL()
+    return image
+}
