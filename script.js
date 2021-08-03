@@ -385,8 +385,14 @@ downloadButton.addEventListener("click",(e) => {
 //結合ボタンの実装
 const contactButton = document.getElementById("buttonContact");
 contactButton.addEventListener("click",(e) => {
-    ctxContact.drawImage(createImage(ctxMap),0,0);
-    ctxContact.drawImage(createImage(ctxPaint),0,0);
+    let image1 = createImage(ctxMap);
+    image1.onload = function(){
+        ctxContact.drawImage(image1,0,0);
+    }
+    let image2 = createImage(ctxPaint);
+    image2.onload = function(){
+        ctxContact.drawImage(image2,0,0);
+    }
     console.log("Contact button pressed!")
 })
 
