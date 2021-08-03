@@ -156,7 +156,7 @@ input[type='file']{
     /* left:200px; */
     /* margin-left: 200; */
     border: solid 3px blue;
-    display: none !important; 非表示設定
+    /* display: none !important; 非表示設定 */
 }
 
 .buttonContact{
