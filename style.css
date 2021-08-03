@@ -4,6 +4,10 @@
     height:50px;
 }
 
+.downloadButton{
+    cursor: pointer;
+}
+
 .workspace{
     display: flex;
     border:solid 5px orange;

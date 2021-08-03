@@ -365,3 +365,12 @@ canvasPaint.addEventListener("mouseup",()=>{
 canvasPaint.addEventListener("mousemove",(event)=>{
     draw(event.offsetX,event.offsetY);
 });
+
+//ダウンロードボタンの実装
+const downloadButton = document.getElementById("downloadButton");
+downloadButton.addEventListener("click",(e) => {
+    let link = document.createElement("a");
+    link.href = canvasPaint.toDataURL("image/png");
+    link.download = "test.png";
+    link.click();
+})
