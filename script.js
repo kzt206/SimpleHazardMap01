@@ -137,21 +137,21 @@ this.canvasPaint.addEventListener("mousedown",(e) => {
     //penStatusの状態に応じて挙動変更
     console.log("Penstatus;",penStatus);
       if(penStatus == "home") {
-        ctxPaint.drawImage(charaHome,x,y);
+        ctxPaint.drawImage(charaHome,x+25,y+25);
       } else if(penStatus == "school"){
-        ctxPaint.drawImage(charaSchool,x,y);
+        ctxPaint.drawImage(charaSchool,x+25,y+25);
       } else if(penStatus == "evacuation"){
-        ctxPaint.drawImage(charaEvacuation,x,y);
+        ctxPaint.drawImage(charaEvacuation,x+25,y+25);
       } else if(penStatus == "camera1"){
-        ctxPaint.drawImage(charaCamera1,x,y);
+        ctxPaint.drawImage(charaCamera1,x+25,y+25);
       } else if(penStatus == "camera2"){
-        ctxPaint.drawImage(charaCamera2,x,y);
+        ctxPaint.drawImage(charaCamera2,x+25,y+25);
       } else if(penStatus == "camera3"){
-        ctxPaint.drawImage(charaCamera3,x,y);
+        ctxPaint.drawImage(charaCamera3,x+25,y+25);
       } else if(penStatus == "camera4"){
-        ctxPaint.drawImage(charaCamera4,x,y);
+        ctxPaint.drawImage(charaCamera4,x+25,y+25);
       } else if(penStatus == "camera5"){
-        ctxPaint.drawImage(charaCamera5,x,y);
+        ctxPaint.drawImage(charaCamera5,x+25,y+25);
       } else if(penStatus == "eraser"){
         ctxPaint.clearRect(e.offsetX-10,e.offsetY-10,20,20);
       }
@@ -372,6 +372,53 @@ canvasPaint.addEventListener("mouseup",()=>{
 canvasPaint.addEventListener("mousemove",(event)=>{
     draw(event.offsetX,event.offsetY);
 });
+
+
+//キャンバスに入ったときにマウスカーソルの変更
+let cursor = document.querySelector(".mouse");
+
+canvasPaint.addEventListener("mouseenter",(event)=>{
+    // console.log("mouse enter");
+    switch(penStatus){
+        case "home":
+            canvasPaint.style.cursor = "url(home.cur), auto";
+            break;
+        case "school":
+            canvasPaint.style.cursor = "url(school.cur),auto";
+            break;
+        case "evacutaion":
+            canvasPaint.style.cursor = "url(evacuation.cur),auto";
+            break;
+        case "camera1":
+            canvasPaint.style.cursor = "url(camera1.cur),auto";
+            break;
+        case "camera2":
+            canvasPaint.style.cursor = "url(camera2.cur),auto";
+            break;
+        case "camera3":
+            canvasPaint.style.cursor = "url(camera3.cur),auto";
+            break;
+        case "camera4":
+            canvasPaint.style.cursor = "url(camera4.cur),auto";
+            break;
+        case "camera5":
+            canvasPaint.style.cursor = "url(camera5.cur),auto";
+            break;
+        case "eraser":
+            canvasPaint.style.cursor = "url(eraser.cur),auto";
+            break;
+        default:
+            canvasPaint.style.cursor = "crosshair";
+
+    
+    }
+    
+});
+
+// canvasPaint.addEventListener("mouseleave",(event)=>{
+//     console.log("mouse leave");
+// });
+
 
 //ダウンロードボタンの実装
 const downloadButton = document.getElementById("downloadButton");
