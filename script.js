@@ -440,6 +440,27 @@ contactButton.addEventListener("click",(e) => {
     image2.onload = function(){
         ctxContact.drawImage(image2,0,0,800,600);
     }
+    let imagePhoto1 = createImage(ctxPhoto1);
+    imagePhoto1.onload = function(){
+        ctxContact.drawImage(imagePhoto1,800,0,200,120);
+    }
+    let imagePhoto2 = createImage(ctxPhoto2);
+    imagePhoto2.onload = function(){
+        ctxContact.drawImage(imagePhoto2,800,120,200,120);
+    }
+    let imagePhoto3 = createImage(ctxPhoto3);
+    imagePhoto3.onload = function(){
+        ctxContact.drawImage(imagePhoto3,800,240,200,120);
+    }
+    let imagePhoto4 = createImage(ctxPhoto4);
+    imagePhoto4.onload = function(){
+        ctxContact.drawImage(imagePhoto4,800,360,200,120);
+    }
+    let imagePhoto5 = createImage(ctxPhoto5);
+    imagePhoto5.onload = function(){
+        ctxContact.drawImage(imagePhoto1,800,480,200,120);
+    }
+
     console.log("Contact button pressed!")
 })
 
