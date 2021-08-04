@@ -344,7 +344,7 @@ function draw(x2,y2){
         //draw line
         drawLine(x,y,x2,y2);
     }else if(isDrag && penStatus == "eraser"){
-        ctxPaint.clearRect(x-10,y-10,20,20);
+        ctxPaint.clearRect(x,y,20,20);
     }
     
     x = x2;
