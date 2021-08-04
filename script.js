@@ -153,7 +153,7 @@ this.canvasPaint.addEventListener("mousedown",(e) => {
       } else if(penStatus == "camera5"){
         ctxPaint.drawImage(charaCamera5,x+25,y+25);
       } else if(penStatus == "eraser"){
-        ctxPaint.clearRect(e.offsetX-10,e.offsetY-10,20,20);
+        ctxPaint.clearRect(e.offsetX,e.offsetY,20,20);
       }
 })
 
@@ -386,7 +386,7 @@ canvasPaint.addEventListener("mouseenter",(event)=>{
         case "school":
             canvasPaint.style.cursor = "url(school.cur),auto";
             break;
-        case "evacutaion":
+        case "evacuation":
             canvasPaint.style.cursor = "url(evacuation.cur),auto";
             break;
         case "camera1":
@@ -405,7 +405,7 @@ canvasPaint.addEventListener("mouseenter",(event)=>{
             canvasPaint.style.cursor = "url(camera5.cur),auto";
             break;
         case "eraser":
-            canvasPaint.style.cursor = "url(eraser.cur),auto";
+            canvasPaint.style.cursor = "url(eraser-small.cur),auto";
             break;
         default:
             canvasPaint.style.cursor = "crosshair";
