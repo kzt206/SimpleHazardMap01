@@ -16,7 +16,7 @@ canvasPaint.height = 600;
 const canvasContact = document.querySelector("#canvasContact");
 const ctxContact = canvasContact.getContext("2d");
 
-canvasContact.width = 800;
+canvasContact.width = 1000;
 canvasContact.height = 600;
 
 //マップ画像の読み込み
@@ -434,11 +434,11 @@ const contactButton = document.getElementById("buttonContact");
 contactButton.addEventListener("click",(e) => {
     let image1 = createImage(ctxMap);
     image1.onload = function(){
-        ctxContact.drawImage(image1,0,0);
+        ctxContact.drawImage(image1,0,0,800,600);
     }
     let image2 = createImage(ctxPaint);
     image2.onload = function(){
-        ctxContact.drawImage(image2,0,0);
+        ctxContact.drawImage(image2,0,0,800,600);
     }
     console.log("Contact button pressed!")
 })
