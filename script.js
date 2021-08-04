@@ -17,7 +17,7 @@ const canvasContact = document.querySelector("#canvasContact");
 const ctxContact = canvasContact.getContext("2d");
 
 canvasContact.width = 1000;
-canvasContact.height = 600;
+canvasContact.height = 800;
 
 //マップ画像の読み込み
 const selectMapFile = document.getElementById("selectMapFile");
@@ -432,6 +432,8 @@ downloadButton.addEventListener("click",(e) => {
 //結合ボタンの実装
 const contactButton = document.getElementById("buttonContact");
 contactButton.addEventListener("click",(e) => {
+    ctxContact.clearRect(0,0,canvasContact.width,canvasContact.height)
+
     let image1 = createImage(ctxMap);
     image1.onload = function(){
         ctxContact.drawImage(image1,0,0,800,600);
@@ -458,8 +460,31 @@ contactButton.addEventListener("click",(e) => {
     }
     let imagePhoto5 = createImage(ctxPhoto5);
     imagePhoto5.onload = function(){
-        ctxContact.drawImage(imagePhoto1,800,480,200,120);
+        ctxContact.drawImage(imagePhoto5,800,480,200,120);
     }
+
+    //理由の文字を焼き付け
+    const memoReason = document.getElementById("memoReason");
+    // console.log(memoReason.value);
+    //文字のスタイルを指定
+	ctxContact.font = '22px serif';
+	ctxContact.fillStyle = '#404040';
+	//文字の配置を指定（左上基準にしたければtop/leftだが、文字の中心座標を指定するのでcenter
+	ctxContact.textBaseline = 'top';
+	ctxContact.textAlign = 'left';
+    ctxContact.fillText("避難経路を考えた理由",0,600);
+    ctxContact.font = '18px serif';
+    ctxContact.fillStyle = 'black';
+	ctxContact.fillText(memoReason.value, 0, 650);
+
+    //周辺環境の文字を焼き付け
+    const memoCircumstance = document.getElementById("memoCircumstance");
+    ctxContact.font = '22px serif';
+	ctxContact.fillStyle = '#404040';
+    ctxContact.fillText("私の家の周りのようす",1000/2,600);
+    ctxContact.font = '18px serif';
+    ctxContact.fillStyle = 'black';
+    ctxContact.fillText(memoCircumstance.value, 1000/2, 650);
 
     console.log("Contact button pressed!")
 })
