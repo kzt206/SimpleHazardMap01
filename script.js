@@ -464,27 +464,41 @@ contactButton.addEventListener("click",(e) => {
     }
 
     //理由の文字を焼き付け
-    const memoReason = document.getElementById("memoReason");
+    const memoReason1 = document.getElementById("memoReason1");
+    const memoReason2 = document.getElementById("memoReason2");
+    const memoReason3 = document.getElementById("memoReason3");
+    const memoReason4 = document.getElementById("memoReason4");
+    const memoReason5 = document.getElementById("memoReason5");
+    const memoCircumstance1 = document.getElementById("memoCircumstance1");
+    const memoCircumstance2 = document.getElementById("memoCircumstance2");
+    const memoCircumstance3 = document.getElementById("memoCircumstance3");
+    const memoCircumstance4 = document.getElementById("memoCircumstance4");
+    const memoCircumstance5 = document.getElementById("memoCircumstance5");
     // console.log(memoReason.value);
-    //文字のスタイルを指定
-	ctxContact.font = '22px serif';
-	ctxContact.fillStyle = '#404040';
+    
 	//文字の配置を指定（左上基準にしたければtop/leftだが、文字の中心座標を指定するのでcenter
 	ctxContact.textBaseline = 'top';
 	ctxContact.textAlign = 'left';
+    //タイトル文字の焼き付け
+    //文字のスタイルを指定
+	ctxContact.font = '22px serif';
+	ctxContact.fillStyle = 'gray';
     ctxContact.fillText("避難経路を考えた理由",0,600);
-    ctxContact.font = '18px serif';
-    ctxContact.fillStyle = 'black';
-	ctxContact.fillText(memoReason.value, 0, 650);
-
-    //周辺環境の文字を焼き付け
-    const memoCircumstance = document.getElementById("memoCircumstance");
-    ctxContact.font = '22px serif';
-	ctxContact.fillStyle = '#404040';
     ctxContact.fillText("私の家の周りのようす",1000/2,600);
+    
+    //文字のスタイルを指定
     ctxContact.font = '18px serif';
     ctxContact.fillStyle = 'black';
-    ctxContact.fillText(memoCircumstance.value, 1000/2, 650);
+	ctxContact.fillText(memoReason1.value, 0, 650);
+	ctxContact.fillText(memoReason2.value, 0, 680);
+	ctxContact.fillText(memoReason3.value, 0, 710);
+	ctxContact.fillText(memoReason4.value, 0, 740);
+	ctxContact.fillText(memoReason5.value, 0, 770);
+    ctxContact.fillText(memoCircumstance1.value, 1000/2, 650);
+    ctxContact.fillText(memoCircumstance2.value, 1000/2, 680);
+    ctxContact.fillText(memoCircumstance3.value, 1000/2, 710);
+    ctxContact.fillText(memoCircumstance4.value, 1000/2, 740);
+    ctxContact.fillText(memoCircumstance5.value, 1000/2, 770);
 
     console.log("Contact button pressed!")
 })
