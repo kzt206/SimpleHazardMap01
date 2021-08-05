@@ -489,11 +489,11 @@ contactButton.addEventListener("click",(e) => {
     //文字のスタイルを指定
     ctxContact.font = '18px serif';
     ctxContact.fillStyle = 'black';
-	ctxContact.fillText(memoReason1.value, 0, 650);
-	ctxContact.fillText(memoReason2.value, 0, 680);
-	ctxContact.fillText(memoReason3.value, 0, 710);
-	ctxContact.fillText(memoReason4.value, 0, 740);
-	ctxContact.fillText(memoReason5.value, 0, 770);
+    ctxContact.fillText(memoReason1.value, 0, 650);
+    ctxContact.fillText(memoReason2.value, 0, 680);
+    ctxContact.fillText(memoReason3.value, 0, 710);
+    ctxContact.fillText(memoReason4.value, 0, 740);
+    ctxContact.fillText(memoReason5.value, 0, 770);
     ctxContact.fillText(memoCircumstance1.value, 1000/2, 650);
     ctxContact.fillText(memoCircumstance2.value, 1000/2, 680);
     ctxContact.fillText(memoCircumstance3.value, 1000/2, 710);
